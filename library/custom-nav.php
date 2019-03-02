@@ -20,38 +20,38 @@ if ( ! function_exists( 'wpt_register_theme_customizer' ) ) :
 		);
 
 		// Create custom field for mobile navigation layout
-		$wp_customize->add_section(
-			'mobile_menu_layout', array(
-				'title'    => __( 'Mobile navigation layout', 'foundationpress' ),
-				'panel'    => 'mobile_menu_settings',
-				'priority' => 1000,
-			)
-		);
+		// $wp_customize->add_section(
+		// 	'mobile_menu_layout', array(
+		// 		'title'    => __( 'Mobile navigation layout', 'foundationpress' ),
+		// 		'panel'    => 'mobile_menu_settings',
+		// 		'priority' => 1000,
+		// 	)
+		// );
 
 		// Set default navigation layout
-		$wp_customize->add_setting(
-			'wpt_mobile_menu_layout',
-			array(
-				'default' => __( 'topbar', 'foundationpress' ),
-			)
-		);
+		// $wp_customize->add_setting(
+		// 	'wpt_mobile_menu_layout',
+		// 	array(
+		// 		'default' => __( 'topbar', 'foundationpress' ),
+		// 	)
+		// );
 
 		// Add options for navigation layout
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'mobile_menu_layout',
-				array(
-					'type'     => 'radio',
-					'section'  => 'mobile_menu_layout',
-					'settings' => 'wpt_mobile_menu_layout',
-					'choices'  => array(
-						'topbar'    => 'Topbar',
-						'offcanvas' => 'Offcanvas',
-					),
-				)
-			)
-		);
+		// $wp_customize->add_control(
+		// 	new WP_Customize_Control(
+		// 		$wp_customize,
+		// 		'mobile_menu_layout',
+		// 		array(
+		// 			'type'     => 'radio',
+		// 			'section'  => 'mobile_menu_layout',
+		// 			'settings' => 'wpt_mobile_menu_layout',
+		// 			'choices'  => array(
+		// 				'topbar'    => 'Topbar',
+		// 				'offcanvas' => 'Offcanvas',
+		// 			),
+		// 		)
+		// 	)
+		// );
 
 	}
 

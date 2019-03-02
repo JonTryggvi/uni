@@ -25,10 +25,13 @@
     "responsive"
   ],
   "dependencies": {
-    "foundation-sites": "6.5.1",
+    "foundation-sites": "6.4.4-rc1",
+    "gsap": "^2.1.1",
     "jquery": "~3.0.0",
-    "what-input": "^4.1.3",
-    "motion-ui": "~1.2.2"
+    "motion-ui": "zurb/motion-ui#master",
+    "path": "^0.12.7",
+    "scrollmagic": "^2.0.6",
+    "what-input": "^4.1.3"
   },
   "devDependencies": {
     "ansi-colors": "^1.0.1",
