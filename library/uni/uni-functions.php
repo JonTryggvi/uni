@@ -10,6 +10,6 @@
 			}
 			ob_start();
 			include(locate_template($path . '.php'));
-			echo ob_get_clean();
+			return ob_get_clean();
 		}
 	}

@@ -5,20 +5,58 @@
   width: 100vw;
   height: 80px;
   &__inner-container {
-    // width: 90vw;
     height: 100%;
-    // margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
   }
   &__nav-list {
+    position: relative;
     display: flex;
+    height: 100%;
     min-width: 320px;
     justify-content: flex-end;
+    align-items: center;
     margin: 0;
+    list-style: none;
+    z-index: 1;
     li {
+      display: flex;
+      align-items: center;
       margin-left: 30px;
+      height: 100%;
+      z-index: 1;
+
+      &:hover {
+        cursor: pointer;
+        a {color: $white}
+      }
+      a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        text-transform: uppercase;
+        color: $darkBlue;
+        transition: color 600ms ease;
+      }
+    }
+  }
+  & nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    & .magic-line {
+      position: absolute;
+      top:6px;
+      min-width: 30px;
+      width: 30px;
+      height: calc(100% - 12px);
+      opacity: 0;
+      background-color: $pink;
+      z-index: 0;
+      transition: opacity 400ms 100ms ease, width 300ms ease, left 400ms 100ms ease, right 400ms 100ms ease;
     }
   }
 }
