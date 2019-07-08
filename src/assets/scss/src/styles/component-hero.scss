@@ -1,0 +1,30 @@
+.uni_section__hero {
+  height: calc(100vh - 80px);
+  &__row {
+    height: 100%;
+    &__left {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding-top: 80px;
+      background-color: $white;
+      &__box {
+        max-height: 400px;
+        max-width: 60%;
+        padding-left: ($global-width / 14);
+      }
+    }
+    &__right {
+      display: flex;
+      align-items: center;
+      position: relative;
+      picture {
+        position: absolute;
+        width: ($global-width / 14)*8;
+        right:0;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

@@ -66,9 +66,13 @@
 
 // 1. Global
 // ---------
-
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:700&display=swap|Raleway:400,600&display=swap|EB+Garamond:400,700&display=swap');
+$nav-font-family: 'Raleway', sans-serif;
+$paragraph-font-family: 'EB Garamond', serif;
+$raleway: $nav-font-family;
+$gara: $paragraph-font-family;
 $global-font-size: 100%;
-$global-width: rem-calc(1200);
+$global-width: rem-calc(1500);
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #1779ba,
@@ -84,7 +88,8 @@ $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$body-font-family: 'Cormorant Garamond', serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$corma: $body-font-family;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -120,7 +125,7 @@ $breakpoint-classes: (small medium large);
 // -----------
 
 $grid-row-width: $global-width;
-$grid-column-count: 12;
+$grid-column-count: 14;
 $grid-column-gutter: (
   small: 20px,
   medium: 30px,
@@ -135,7 +140,7 @@ $block-grid-max: 8;
 $header-font-family: $body-font-family;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
-$font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
+$font-family-monospace: 'Raleway', sans-serif, Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;
 $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;

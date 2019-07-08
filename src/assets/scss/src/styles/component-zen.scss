@@ -1,0 +1,54 @@
+.zen-inner {
+  display: flex;
+  align-items: center;
+  min-height: 60vh;
+  .zen-dot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .zen-pulse {
+      min-width: 200px;
+      min-height: 200px;
+      overflow: visible;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: '';
+        top: calc(50% - 100px);
+        left: calc(50% - 100px);
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, rgba($pink, 1) 10%, rgba($pink, .1) 50%, rgba($pink, 0) 60%), no-repeat;
+        animation: pulse 10s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      }
+    }
+  }
+  .zen-text {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    max-height: 200px;
+    h2 {
+      font-family: $raleway;
+      font-weight: 600;
+      display: block;
+      text-align: right;
+    }
+    p {
+      text-align: right;
+    }
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: .9;
+    transform: scale(1.5);    
+  }
+}
