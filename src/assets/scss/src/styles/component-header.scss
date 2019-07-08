@@ -1,11 +1,17 @@
 .uni_header {
+  display: flex;
+  justify-content: center;
   position: fixed;
   top:0;
   left: 0;
   width: 100vw;
   height: 80px;
+  z-index: 10;
   &__inner-container {
     height: 100%;
+    width: 100%;
+    max-width: $global-width;
+    padding: 0 ($global-width / 14);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,15 +36,19 @@
 
       &:hover {
         cursor: pointer;
-        a {color: $white}
+        a {
+          color: $white;
+        }
       }
       a {
         display: flex;
         align-items: center;
         height: 100%;
         text-transform: uppercase;
+        font-family: $nav-font-family;
         color: $darkBlue;
-        transition: color 600ms ease;
+        font-size: 13px;
+        transition: all 600ms 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
       }
     }
   }
@@ -46,6 +56,7 @@
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 
     & .magic-line {
       position: absolute;
@@ -56,7 +67,10 @@
       opacity: 0;
       background-color: $pink;
       z-index: 0;
-      transition: opacity 400ms 100ms ease, width 300ms ease, left 400ms 100ms ease, right 400ms 100ms ease;
+      transition: 
+        opacity 400ms 100ms ease-in, 
+        width 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95), 
+        left 400ms 100ms cubic-bezier(1, 0, 0, 1);
     }
   }
 }
