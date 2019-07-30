@@ -16,11 +16,16 @@ const Header = {
       menuItem.addEventListener('mouseover', this.handleMenuItemMouseover.bind(this))
       menuItem.addEventListener('mouseleave', this.handleMenuItemMouseleave.bind(this))
     })
+    window.addEventListener('scroll', this.handleWindowScroll.bind(this))
+  },
+  handleWindowScroll(e) {
+    var scrollTop = e.srcElement.scrollingElement.scrollTop;
+    console.log(scrollTop)
+    scrollTop > 30 ? this.header.classList.add('bc__header--white') : this.header.classList.remove('bc__header--white')
   },
   handleMenuItemMouseover(e) {
     const menuItemPosition = e.target.getBoundingClientRect()
     const headerPos = this.header.getBoundingClientRect();
-    console.log(headerPos)
     const menuItemWidth =   menuItemPosition.right - menuItemPosition.left
     this.setMacigLine(this.magicLine, menuItemPosition.left, menuItemPosition.right, menuItemPosition.top, menuItemWidth)
   },

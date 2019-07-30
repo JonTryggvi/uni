@@ -1,5 +1,6 @@
 .uni_section__hero {
   height: calc(100vh - 80px);
+  
   &__row {
     height: 100%;
     &__left {
@@ -21,6 +22,7 @@
       picture {
         position: absolute;
         width: ($global-width / 14)*8;
+        max-width: 60vw;
         right:0;
         display: flex;
         align-items: center;
@@ -28,3 +30,5 @@
     }
   }
 }
+
+
