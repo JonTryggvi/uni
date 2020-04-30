@@ -27,7 +27,7 @@
   "dependencies": {
     "foundation-sites": "6.4.4-rc1",
     "gsap": "^2.1.1",
-    "jquery": "~3.0.0",
+    "jquery": "~3.5.0",
     "motion-ui": "zurb/motion-ui#master",
     "path": "^0.12.7",
     "scrollmagic": "^2.0.6",
